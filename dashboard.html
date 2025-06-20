@@ -1,0 +1,77 @@
+function nataraj_themes_dashboard_page_content() {
+    $theme = wp_get_theme();
+    $theme_name = $theme->get('Name');
+    $screenshot = $theme->get_screenshot();
+    $customize_url = admin_url('customize.php');
+
+    ob_start();
+    ?>
+    <div class="wrap">
+        <h1>Themes Dashboard</h1>
+        <div style="display: flex; gap: 30px; margin-top: 30px;">
+            <!-- Left Column -->
+            <div style="flex: 1; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+                <img src="<?php echo esc_url($screenshot); ?>" alt="Theme Screenshot" style="max-width: 100%; border: 1px solid #ccc;">
+                <h2 style="margin-top: 15px;"><?php echo esc_html($theme_name); ?></h2>
+
+                <div style="margin: 15px 0 30px;">
+                    <a href="#" class="button" style="background: #0056ff; color: #fff; margin-right: 10px;">Buy Premium</a>
+                    <a href="#" class="button" style="background: orange; color: #fff; margin-right: 10px;">Live Demo</a>
+                    <a href="#" class="button" style="background: #ec407a; color: #fff;">Theme Bundle</a>
+                </div>
+
+                <h5>Key Features</h5>
+                <ul>
+                    <li>50+ Premium WordPress Themes</li>
+                    <li>Regular Updates</li>
+                    <li>One-time Payment</li>
+                    <li>50+ Premium WordPress Themes</li>
+                    <li>Regular Updates</li>
+                    <li>One-time Payment</li>
+                    <li>50+ Premium WordPress Themes</li>
+                    <li>Regular Updates</li>
+                    <li>One-time Payment</li>
+                </ul>
+
+                <div style="margin-top: 20px; padding: 20px; background: #f7f7f7; border: 1px dashed #aaa;">
+                    <p style="margin-bottom: 10px;"><strong>Use Coupon Code</strong></p>
+                    <a href="#" class="button button-primary" style="margin-bottom: 10px;">UPGRADE NOW</a><br>
+                    <code style="background: #eee; padding: 4px 8px;">elemento20</code>
+                </div>
+            </div>
+
+            <!-- Right Column: Theme Bundle -->
+			<div style="flex: 2; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+				<img src="https://www.luzuk.com/wp-content/uploads/2023/10/theme-bundle-banner.jpg" alt="Theme Bundle" style="max-width: 100%; border-radius: 6px; margin-bottom: 20px;">
+				
+				<h2>Theme Bundle</h2>
+				<p>Get access to all 129+ premium themes in one package.</p>
+
+				<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px;">
+					<?php
+					$features = [
+						"Unlimited Domain Usage",
+						"One Click Installation",
+						"Support for 1 Year",
+						"Options Panel",
+						"Secured & Optimized Code",
+						"All Categories Theme",
+						"Demo data include",
+						"Free installation"
+					];
+					foreach ($features as $feature): ?>
+						<div style="background: #f4f4f4; padding: 15px; text-align: center; border-radius: 6px; font-weight: 500;">
+							<?php echo esc_html($feature); ?>
+						</div>
+					<?php endforeach; ?>
+				</div>
+
+				<div style="margin-top: 30px;">
+					<a href="https://www.luzuk.com/theme-bundle/" class="button" style="background: #6a00ff; color: #fff; padding: 12px 30px; font-size: 16px;">Get Theme Bundle</a>
+				</div>
+			</div>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
