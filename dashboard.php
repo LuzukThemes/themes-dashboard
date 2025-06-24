@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 add_action('admin_menu', 'luzuk_theme_dashboard_menu');
 
 function luzuk_theme_dashboard_menu() {
@@ -14,11 +16,10 @@ function luzuk_theme_dashboard_menu() {
 function luzuk_theme_dashboard_page() {
     $theme = wp_get_theme();
     $theme_name = $theme->get('Name');
-    $theme_screenshot = $theme->get_screenshot(); // Path to screenshot.png
+    $theme_screenshot = $theme->get_screenshot();
     $theme_description = $theme->get('Description');
     $theme_version = $theme->get('Version');
     ?>
-
     <div class="wrap">
         <h1>Themes Dashboard</h1>
         <div style="display: flex; gap: 30px; margin-top: 20px;">
@@ -56,6 +57,5 @@ function luzuk_theme_dashboard_page() {
 
         </div>
     </div>
-
     <?php
 }
