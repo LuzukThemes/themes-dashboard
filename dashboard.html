@@ -16,3 +16,16 @@
     <div style="margin-top: 30px;">
       <a href="https://www.luzuk.com/products/all-themes-bundle/" target="_blank" style="background: #6a00ff; color: #fff; padding: 12px 30px; font-size: 16px; text-decoration: none; border-radius: 4px; display: inline-block;">Get Theme Bundle</a>
     </div>
+
+    <!-- LEFT: Active Theme Info -->
+            <div style="flex: 1; background: #fff; padding: 20px; box-shadow: 0 0 10px #ccc;">
+                <?php if ($theme_screenshot): ?>
+                    <img src="<?php echo esc_url($theme_screenshot); ?>" alt="<?php echo esc_attr($theme_name); ?>" style="max-width: 100%;">
+                <?php endif; ?>
+                <h2><?php echo esc_html($theme_name); ?></h2>
+                <p><strong>Version:</strong> <?php echo esc_html($theme_version); ?></p>
+                <p><?php echo esc_html($theme_description); ?></p>
+                <a href="#" class="button button-primary">Buy Premium</a>
+                <a href="#" class="button button-secondary">Live Demo</a>
+                <a href="#" class="button" style="background-color:#e754a3; color: white;">Theme Bundle</a>
+            </div>
