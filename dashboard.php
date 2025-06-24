@@ -39,7 +39,7 @@ function luzuk_theme_dashboard_page() {
 
             <!-- RIGHT: Theme Bundle (Static) -->
             <div style="flex: 1; background: #fff; padding: 20px; box-shadow: 0 0 10px #ccc;">
-                <img src="https://luzuk.com/wp-content/uploads/2024/02/theme-bundle.jpg" style="max-width: 100%;" alt="Theme Bundle">
+                <img src="https://cdn.shopify.com/s/files/1/0935/1194/2456/files/WordPress_Themes_Bundle.png?v=1750415762" style="max-width: 100%;" alt="Theme Bundle">
                 <h2>Theme Bundle</h2>
                 <p style="color: red;">Get access to all 129+ premium themes in one package.</p>
                 <ul style="list-style: none; padding-left: 0;">
