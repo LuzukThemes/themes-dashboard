@@ -34,9 +34,16 @@
 
 <!-- Right Column (from GitHub) -->
 <div style="flex: 1; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-	<p style="color: #ffffff; background: #8c85ff; font-weight: bold; text-align: center; padding: 11px;">
-	  MONSOON SEASON SALE: <a href="https://www.luzuk.com/products/all-themes-bundle/" target="_blank" style="color: #ffffff;text-decoration: none;padding: 4px 8px;margin-left: 5px;border: 1px solid;border-radius: 5px;"> Grab Deal</a>
-	</p>
+	<div class="h-banner" bis_skin_checked="1">
+	  <div class="h-banner__wrapper" target="_blank" bis_skin_checked="1">
+	    <div class="h-banner__info" bis_skin_checked="1">
+	      <span class="h-banner__title t-body-4-bold">MONSOON SEASON SALE:</span>
+	      <div data-v-5eed51cd="" bis_skin_checked="1"><a href="https://www.luzuk.com/products/all-themes-bundle/" target="_blank" class="h-button h-button-neutral0 h-button-outline h-button--small t-body-4-bold" id="" loading="false" dir="ltr" aria-label="Grab deal" data-v-5eed51cd="" data-v-0bb5fef4="" data-v-15dc218c=""><!--[--><!--[--><!--]--><div class="" data-v-0bb5fef4="" bis_skin_checked="1"><!--[-->Grab deal<!--]--></div><!----><!--[--><!--]--><!--]--></a></div>
+	    </div>
+	    <div class="h-banner__sale-image-gradient" bis_skin_checked="1"></div>
+	    <div class="h-banner__sale-image" bis_skin_checked="1"></div>
+	  </div>
+	</div>
     <img src="https://cdn.shopify.com/s/files/1/0935/1194/2456/files/WordPress_Themes_Bundle.png?v=1750415762" alt="Theme Bundle" style="max-width: 100%; border-radius: 6px; margin-bottom: 20px;" />
     <h2>Theme Bundle</h2>
     <p style="color: #ff0000;">Get access to all 129+ premium themes in one package.</p>
@@ -84,3 +91,95 @@
       <a href="https://www.luzuk.com/products/all-themes-bundle/" target="_blank" style="background: #6a00ff; color: #fff; padding: 12px 30px; font-size: 16px; text-decoration: none; border-radius: 4px; display: block; text-align: center;">Get Theme Bundle</a>
     </div>
 </div>
+<style>
+.h-banner {
+    background-color: #8c85ff;
+    box-shadow: 0 4px 10px #0000001a;
+    height: 56px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    margin-bottom: 1em;
+    border-radius: 6px;
+}
+
+.h-banner__wrapper {
+    color: var(--neutral--0);
+    gap: 16px;
+    height: 56px;
+    overflow: hidden;
+    transition: top .3s ease;
+}
+
+.h-banner__info {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-weight: 700;
+    gap: 16px;
+    height: 100%;
+    justify-content: space-between;
+    left: 50%;
+    padding: 0 16px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 104;
+}
+
+span.h-banner__title {
+    align-items: center;
+    color: #ffffff;
+}
+
+a.h-button {
+    border: 1px solid;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    padding: 4px 8px;
+    position: relative;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+
+.h-banner__sale-image-gradient {
+    animation: ease-in-out infinite;
+    animation-duration: 5s;
+    animation-name: shimmer-5eed51cd;
+    background: radial-gradient(46.33% 46.11% at 50% 50%, #b6b2ffcc 0, #ebeaff38 49.5%, #fff0);
+    border-radius: 640px;
+    left: 0;
+    min-height: 250px;
+    min-width: 640px;
+    position: absolute;
+    top: -100px;
+    transform: rotate(-45deg);
+    z-index: 102;
+}
+@keyframes shimmer-5eed51cd {
+    0% {
+        left: -700px
+    }
+
+    to {
+        left: 110%
+    }
+}
+.h-banner__sale-image {
+    background-image: url(https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/1abecbf7-5461-4b2e-47cd-7fc3c6154800/sharpen=0);
+    background-repeat: repeat-x;
+    height: 34px;
+    left: 0;
+    margin: 7px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 103;
+}
+</style>
