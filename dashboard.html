@@ -103,7 +103,7 @@
 	</div>
     <img src="https://cdn.shopify.com/s/files/1/0935/1194/2456/files/WordPress_Themes_Bundle.png?v=1750415762" alt="Theme Bundle" style="max-width: 100%; border-radius: 6px; margin-bottom: 20px;" />
     <h2>Theme Bundle</h2>
-    <p style="color: #ff0000;">Get access to all 129+ premium themes in one package.</p>
+    <p style="color: #ff0000;">Get access to all 130+ premium themes in one package.</p>
 
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px;">
       <div style="background: #f4f4f4; padding: 15px; text-align: center; border-radius: 6px;">Unlimited Domain Usage</div>
@@ -240,4 +240,53 @@ a.h-button {
     z-index: 103;
 filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7469%) hue-rotate(264deg) brightness(96%) contrast(113%);
 }
+table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 14px 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #0073aa;
+      color: white;
+      font-size: 16px;
+    }
+    td:first-child {
+      text-align: left;
+    }
+    .check {
+      color: green;
+      font-size: 20px;
+    }
+    .cross {
+      color: red;
+      font-size: 20px;
+    }
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        background: #0073aa;
+      }
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
 </style>
