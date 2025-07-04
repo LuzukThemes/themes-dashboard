@@ -4,15 +4,16 @@
     <div class="coupon-code" onclick="copyCoupon()">FREEWORDTHEME</div>
   </div>
 <script>
-    function copyCoupon() {
-      const coupon = document.querySelector('.coupon-code').textContent;
-      navigator.clipboard.writeText(coupon).then(() => {
-        alert('Coupon code copied: ' + coupon);
-      }).catch(err => {
-        alert('Failed to copy code');
-      });
-    }
-  </script>
+  function copyCoupon(el) {
+    const coupon = el.textContent;
+    navigator.clipboard.writeText(coupon).then(() => {
+      el.classList.add("copied");
+      setTimeout(() => {
+        el.classList.remove("copied");
+      }, 2000);
+    });
+  }
+</script>
   <style>
       
     .coupon-ticket {
@@ -66,4 +67,29 @@
       letter-spacing: 1px;
     cursor: pointer;
     }
+      .coupon-code::after {
+    content: "Click to copy";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .coupon-code:hover::after {
+    opacity: 1;
+  }
+
+  .coupon-code.copied::after {
+    content: "Copied!";
+    background: #4caf50;
+  }
   </style>
