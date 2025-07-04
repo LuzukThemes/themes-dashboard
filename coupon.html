@@ -1,10 +1,20 @@
 <div class="coupon-ticket">
     <div class="coupon-title">Get 15% OFF</div>
     <div>Use Code Below:</div>
-    <div class="coupon-code">FREEWORDTHEME</div>
+    <div class="coupon-code" onclick="copyCoupon()">FREEWORDTHEME</div>
   </div>
-
+<script>
+    function copyCoupon() {
+      const coupon = document.querySelector('.coupon-code').textContent;
+      navigator.clipboard.writeText(coupon).then(() => {
+        alert('Coupon code copied: ' + coupon);
+      }).catch(err => {
+        alert('Failed to copy code');
+      });
+    }
+  </script>
   <style>
+      
     .coupon-ticket {
       width: 320px;
       margin: 40px auto;
@@ -54,5 +64,6 @@
       border-radius: 4px;
       margin-top: 5px;
       letter-spacing: 1px;
+    cursor: pointer;
     }
   </style>
